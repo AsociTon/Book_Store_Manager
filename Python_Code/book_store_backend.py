@@ -40,13 +40,6 @@ def update(id, title, author, year, isbn):
 def delete(id):
     conn = sqlite3.connect("book_store.db")
     cur = conn.cursor()
-    cur.execute("DELETE FROM BOOK WHERE ID = ?",(id,))
+    cur.execute("DELETE FROM BOOK WHERE ID = ?", (id, ))
     conn.commit()
     conn.close()
-
-#connect()
-#insert("Harry Potter 2", "JK Rowling", 2001, 983907)
-#print(view())
-#print(search("Harry Potter"))
-#update(1, "Harry Potter 1", "JK Rowling", 2001, 983907)
-#delete(1)
